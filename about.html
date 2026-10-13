@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dayao's Creatives</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+            body {
+            font-family: Arial, sans-serif;
+            background-color: #dce9e4;
+            color: #263c38;
+        }
+
+        /* HEADER */
+         header {
+            background-color: #283936;
+            color: white;
+        }
+
+        .top-header {
+            height: 105px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+            border-bottom: 1px solid #71827e;
+        }
+
+        .logo {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            border: 3px solid #b7d8c9;
+            object-fit: cover;
+        }
+        .brand {
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        /* NAVIGATION */
+        nav {
+            height: 65px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 23px 45px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background-color: #3e514c;
+        }
+        /* MAIN CONTENT */
+        main {
+            padding: 55px 7%;
+        }
+
+        .hero {
+            background-color: #eef5f1;
+            min-height: 570px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            color: #263c38;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .hero h2 {
+            font-size: 20px;
+            font-weight: normal;
+            font-style: italic;
+            margin-bottom: 35px;
+            color: #536863;
+        }
+
+        /* PROFILE IMAGES */
+        .profiles {
+            display: flex;
+            gap: 28px;
+            margin-bottom: 35px;
+        }
+
+        .profiles img {
+            width: 115px;
+            height: 115px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #607d73;
+        }
+
+        .description {
+            max-width: 750px;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* BUTTON */
+        .learn-more {
+            display: inline-block;
+            background-color: #344944;
+            color: white;
+            text-decoration: none;
+            padding: 16px 38px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .learn-more:hover {
+            background-color: #607d73;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #283936;
+            color: white;
+            text-align: center;
+            padding: 22px;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            .brand {
+                font-size: 20px;
+            }
+
+            nav a {
+                padding: 20px 12px;
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .profiles img {
+                width: 85px;
+                height: 85px;
+            }
+
+            .description {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="top-header">
+
+            <!-- Replace logo.jpg with your logo -->
+            <img src="logo2.png" class="logo" alt="Logo">
+
+            <div class="brand">
+                DAYAO'S CREATIVES
+            </div>
+
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="about.html" class="active">ABOUT</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <section class="hero">
+
+            <h1>EXPERIENCE THE CREATIVE</h1>
+
+            <h2>
+                Crafting beauty through intentional design.
+            </h2>
+
+
+            <p class="description">
+                Step into a world where every detail is a masterpiece.
+                Dayao's Creative Collections offers a unique blend
+                of modern innovation and timeless elegance.
+            </p>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Dayao's Creatives
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAYAO'S CREATIVES - Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            html {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            overflow-x: hidden;
+        }
+
+        html::-webkit-scrollbar,
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #dce9e4;
+            color: #263c38;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background-color: #283936;
+            color: white;
+            width: 100%;
+        }
+        .top-header {
+            height: 105px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+            border-bottom: 1px solid #71827e;
+        }
+        .logo {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            border: 3px solid #b7d8c9;
+            object-fit: cover;
+        }
+        .brand {
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 20px 30px;
+            font-size: 17px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        nav a:hover, nav a.active {
+            background-color: #3e514c;
+        }
+        main {
+            flex: 1;
+            padding: 55px 20px;
+            width: 100%;
+        }
+        .portfolio-container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+            border: 1px solid #e5e5ef;
+            padding: 50px 40px;
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .portfolio-container h1 {
+            font-size: 34px;
+            color: #263c38;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 16px;
+            color: #263c38;
+            margin-bottom: 40px;
+        }
+        .profiles-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 35px 20px;
+            justify-items: center;
+            width: 100%;
+        }
+        .profile-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+        }
+        .profile-card img {
+            width: 100%;
+            max-width: 120px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #607d73;
+            margin-bottom: 12px;
+            background-color: #ccc;
+        }
+        .profile-card span {
+            font-size: 13px;
+            font-weight: bold;
+            color: #607d73;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        footer {
+            background-color: #f3f3f8;
+            color: #283936;
+            border-top: 1px solid #e5e5ef;
+            text-align: center;
+            padding: 22px;
+            font-size: 14px;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .profiles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 700px) {
+            .brand {
+                font-size: 20px;
+            }
+            nav a {
+                padding: 15px 12px;
+                font-size: 13px;
+            }
+            .portfolio-container {
+                padding: 30px 15px;
+            }
+            .profile-card img {
+                max-width: 100px;
+            }
+        }
+        @media (max-width: 400px) {
+            .profiles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-header">
+            <img src="logo2.png" class="logo" alt="Logo">
+            <div class="brand">DAYAO'S CREATIVES</div>
+        </div>
+        <nav>
+            <a href="index2.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="gallery.html" class="active">GALLERY</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </header>
+    <main>
+        <section class="portfolio-container">
+            <h1>Creative Portfolio</h1>
+            <p class="subtitle">A curated look at our latest collections and artistic ventures.</p>
+            <div class="profiles-grid">
+                <div class="profile-card"><img src="IM1.jpeg" alt="Project 01"><span>Project 01</span></div>
+                <div class="profile-card"><img src="IM2.jpeg" alt="Project 02"><span>Project 02</span></div>
+                <div class="profile-card"><img src="IM3.jpeg" alt="Project 03"><span>Project 03</span></div>
+                <div class="profile-card"><img src="IM4.jpeg" alt="Project 04"><span>Project 04</span></div>
+                <div class="profile-card"><img src="IM5.jpeg" alt="Project 05"><span>Project 05</span></div>
+                <div class="profile-card"><img src="IM6.jpeg" alt="Project 06"><span>Project 06</span></div>
+                <div class="profile-card"><img src="IM7.jpeg" alt="Project 07"><span>Project 07</span></div>
+                <div class="profile-card"><img src="IM8.jpeg" alt="Project 08"><span>Project 08</span></div>
+                <div class="profile-card"><img src="IM9.jpeg" alt="Project 09"><span>Project 09</span></div>
+                <div class="profile-card"><img src="IM10.jpeg" alt="Project 10"><span>Project 10</span></div>
+                <div class="profile-card"><img src="IM11.jpeg" alt="Project 11"><span>Project 11</span></div>
+                <div class="profile-card"><img src="IM12.jpeg" alt="Project 12"><span>Project 12</span></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        @2026 Dayao's Creatives
+    </footer>
+</body>
+</html>
+
+
