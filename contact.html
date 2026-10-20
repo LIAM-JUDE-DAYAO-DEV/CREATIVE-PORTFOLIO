@@ -12,16 +12,25 @@
             box-sizing: border-box;
         }
 
-            body {
+        html, body {
+            width: 100%;
+            min-height: 100%;
+        }
+
+        body {
             font-family: Arial, sans-serif;
             background-color: #dce9e4;
             color: #263c38;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
-        /* HEADER */
-         header {
+
+        header {
             background-color: #283936;
             color: white;
+            width: 100%;
         }
 
         .top-header {
@@ -40,17 +49,19 @@
             border: 3px solid #b7d8c9;
             object-fit: cover;
         }
+        
         .brand {
             font-size: 30px;
             font-weight: bold;
             letter-spacing: 2px;
         }
-        /* NAVIGATION */
+
         nav {
-            height: 65px;
+            min-height: 65px;
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         nav a {
@@ -59,85 +70,144 @@
             padding: 23px 45px;
             font-size: 17px;
             font-weight: bold;
+            display: inline-block;
         }
 
         nav a:hover,
         nav a.active {
             background-color: #3e514c;
         }
-        /* MAIN CONTENT */
+        
         main {
-            padding: 55px 7%;
+            flex: 1;
+            width: 100%;
+            padding: 20px;
         }
 
-        .hero {
+        .workspace {
             background-color: #eef5f1;
-            min-height: 570px;
             border-radius: 12px;
             box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 50px;
+            padding: 20px;
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
         }
 
-        .hero h1 {
-            font-size: 42px;
+        .page-intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .page-intro h1 {
+            font-size: 28px;
             color: #263c38;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+            font-weight: bold;
             letter-spacing: 1px;
         }
 
-        .hero h2 {
-            font-size: 20px;
-            font-weight: normal;
-            font-style: italic;
-            margin-bottom: 35px;
+        .page-intro p {
+            font-size: 15px;
             color: #536863;
         }
 
-        /* PROFILE IMAGES */
-        .profiles {
+        .contact-grid {
             display: flex;
-            gap: 28px;
-            margin-bottom: 35px;
+            gap: 100px;
         }
 
-        .profiles img {
-            width: 115px;
-            height: 115px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #607d73;
+        .details-column {
+            flex: 1;
         }
 
-        .description {
-            max-width: 750px;
+        .column-title {
             font-size: 18px;
-            line-height: 1.6;
+            font-weight: bold;
+            color: #607d73; 
+            letter-spacing: 1px;
             margin-bottom: 30px;
+            text-transform: uppercase;
         }
 
-        /* BUTTON */
-        .learn-more {
-            display: inline-block;
+        .info-block {
+            margin-bottom: 25px;
+        }
+
+        .info-block h3 {
+            font-size: 13px;
+            font-weight: bold;
+            color: #263c38;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .info-block p {
+            font-size: 15px;
+            color: #536863;
+            line-height: 1.6;
+        }
+
+        .form-column {
+            flex: 1.3;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: bold;
+            color: #263c38;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #71827e;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #263c38;
+            background-color: #ffffff;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #99a39f;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
             background-color: #344944;
             color: white;
-            text-decoration: none;
-            padding: 16px 38px;
-            border-radius: 30px;
+            border: none;
+            padding: 16px;
+            font-size: 13px;
             font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 30px;
+            cursor: pointer;
             transition: 0.3s;
+            margin-top: 5px;
         }
 
-        .learn-more:hover {
+        .submit-btn:hover {
             background-color: #607d73;
         }
 
-        /* FOOTER */
         footer {
             background-color: #283936;
             color: white;
@@ -146,29 +216,49 @@
             font-size: 14px;
         }
 
-        /* MOBILE */
         @media (max-width: 700px) {
+            .top-header {
+                height: 90px;
+                gap: 10px;
+            }
+
+            .logo {
+                width: 45px;
+                height: 45px;
+            }
 
             .brand {
                 font-size: 20px;
+                letter-spacing: 1px;
             }
 
             nav a {
-                padding: 20px 12px;
+                padding: 15px 12px;
                 font-size: 13px;
             }
 
-            .hero h1 {
-                font-size: 30px;
+            main {
+                padding: 15px;
             }
 
-            .profiles img {
-                width: 85px;
-                height: 85px;
+            .workspace {
+                padding: 30px 15px;
             }
 
-            .description {
-                font-size: 15px;
+            .contact-grid {
+                flex-direction: column;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .brand {
+                font-size: 17px;
+            }
+
+            nav a {
+                padding: 15px 9px;
+                font-size: 12px;
             }
         }
     </style>
@@ -176,56 +266,79 @@
 
 <body>
 
-    <!-- HEADER -->
     <header>
-
         <div class="top-header">
 
-            <!-- Replace logo.jpg with your logo -->
             <img src="logo2.png" class="logo" alt="Logo">
-
             <div class="brand">
                 DAYAO'S CREATIVES
             </div>
-
         </div>
 
-        
         <nav>
             <a href="index.html">HOME</a>
             <a href="about.html">ABOUT</a>
             <a href="gallery.html">GALLERY</a>
             <a href="contact.html" class="active">CONTACT</a>
         </nav>
-
     </header>
 
-
-    <!-- MAIN CONTENT -->
     <main>
+        <section class="workspace">
 
-        <section class="hero">
+            <div class="page-intro">
+                <h1>Get In Touch</h1>
+                <p>Have a question or a project in mind? Reach out to us below.</p>
+            </div>
 
-            <h1>EXPERIENCE THE CREATIVE</h1>
+            <div class="contact-grid">
 
-            <h2>
-                Crafting beauty through intentional design.
-            </h2>
+                <div class="details-column">
+                    <h2 class="column-title">Contact Details</h2>
+                    
+                    <div class="info-block">
+                        <h3>Email</h3>
+                        <p>liamjudedayao@gmail.com</p>
+                    </div>
 
+                    <div class="info-block">
+                        <h3>Studio Address</h3>
+                        <p>123 Creative Blvd, Art District<br>Manila, Philippines</p>
+                    </div>
 
-            <p class="description">
-                Step into a world where every detail is a masterpiece.
-                Dayao's Creative Collections offers a unique blend
-                of modern innovation and timeless elegance.
-            </p>
+                    <div class="info-block">
+                        <h3>Business Hours</h3>
+                        <p>Mon - Fri 9:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
 
+                <div class="form-column">
+                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent!');">
+                        
+                        <div class="form-group">
+                            <label for="fullname">Full Name</label>
+                            <input type="text" id="fullname" name="fullname" placeholder="Your Name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="emailaddress">Email Address</label>
+                            <input type="email" id="emailaddress" name="emailaddress" placeholder="email@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comments">Comments / Message</label>
+                            <textarea id="comments" name="comments" placeholder="Write your message here..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
 
         </section>
-
     </main>
 
-
-    <!-- FOOTER -->
     <footer>
         © 2026 Dayao's Creatives
     </footer>

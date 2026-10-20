@@ -12,16 +12,25 @@
             box-sizing: border-box;
         }
 
-            body {
+        html, body {
+            width: 100%;
+            min-height: 100%;
+        }
+
+        body {
             font-family: Arial, sans-serif;
             background-color: #dce9e4;
             color: #263c38;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         /* HEADER */
-         header {
+        header {
             background-color: #283936;
             color: white;
+            width: 100%;
         }
 
         .top-header {
@@ -47,10 +56,11 @@
         }
         /* NAVIGATION */
         nav {
-            height: 65px;
+            min-height: 65px;
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         nav a {
@@ -59,6 +69,7 @@
             padding: 23px 45px;
             font-size: 17px;
             font-weight: bold;
+            display: inline-block;
         }
 
         nav a:hover,
@@ -67,12 +78,13 @@
         }
         /* MAIN CONTENT */
         main {
-            padding: 55px 7%;
+            flex: 1;
+            width: 100%;
+            padding: 20px;
         }
 
         .hero {
             background-color: #eef5f1;
-            min-height: 570px;
             border-radius: 12px;
             box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 
@@ -81,7 +93,10 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 50px;
+            padding: 20px;
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
         }
 
         .hero h1 {
@@ -149,13 +164,32 @@
         /* MOBILE */
         @media (max-width: 700px) {
 
+            .top-header {
+                height: 90px;
+                gap: 10px;
+            }
+
+            .logo {
+                width: 45px;
+                height: 45px;
+            }
+
             .brand {
                 font-size: 20px;
+                letter-spacing: 1px;
             }
 
             nav a {
-                padding: 20px 12px;
+                padding: 15px 12px;
                 font-size: 13px;
+            }
+
+            main {
+                padding: 15px;
+            }
+
+            .hero {
+                padding: 30px 15px;
             }
 
             .hero h1 {
@@ -169,6 +203,17 @@
 
             .description {
                 font-size: 15px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .brand {
+                font-size: 17px;
+            }
+
+            nav a {
+                padding: 15px 9px;
+                font-size: 12px;
             }
         }
     </style>
@@ -214,9 +259,9 @@
 
 
             <p class="description">
-                Step into a world where every detail is a masterpiece.
-                Dayao's Creative Collections offers a unique blend
-                of modern innovation and timeless elegance.
+                Explore a collection of inspiring designs where imagination meets artistry. 
+                At Dayao's Creatives, we transform ideas into meaningful creations through 
+                thoughtful design, passion, and attention to every detail.
             </p>
 
 
